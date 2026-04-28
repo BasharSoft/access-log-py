@@ -8,10 +8,10 @@ This package is not on PyPI. Install it directly from the GitHub repo, pinned to
 
 ```
 # requirements.txt
-access-log-py @ git+ssh://git@github.com/BasharSoft/access-log-py.git@v0.1.0
+access-log-py @ git+https://github.com/BasharSoft/access-log-py.git@v0.1.0
 ```
 
-Use `git+https://` if your build environment doesn't have SSH credentials to the org. Always pin a tag — never `@main` — so a half-baked main commit can't silently ship to consumers.
+The repo is public, so HTTPS works with no auth — drop straight into a Dockerfile / Kaniko build without mounting credentials. If your build environment already has GitHub SSH credentials (deploy key, agent forwarding) you can use `git+ssh://git@github.com/BasharSoft/access-log-py.git@v0.1.0` instead. Always pin a tag — never `@main` — so a half-baked main commit can't silently ship to consumers.
 
 ## Usage
 
